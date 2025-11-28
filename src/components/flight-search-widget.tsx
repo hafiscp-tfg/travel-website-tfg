@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -98,40 +99,36 @@ function FlightSearchForm() {
                     />
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4 items-end px-2 pt-2">
-                    <div className="lg:col-span-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end px-2 pt-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:col-span-2 lg:col-span-4 lg:grid-cols-4">
                         <FormField
-                        control={form.control}
-                        name="from"
-                        render={({ field }) => (
-                            <FormItem>
-                            <FormLabel className="text-left text-sm font-medium">From</FormLabel>
-                            <FormControl>
-                                <Input placeholder="DXB" {...field} className="uppercase bg-background h-12" />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
-                        )}
+                            control={form.control}
+                            name="from"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormLabel className="text-left text-sm font-medium">From</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="DXB" {...field} className="uppercase bg-background h-12" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
                         />
-                    </div>
 
-                    <div className="lg:col-span-2">
                         <FormField
-                        control={form.control}
-                        name="to"
-                        render={({ field }) => (
-                            <FormItem>
-                            <FormLabel className="text-left text-sm font-medium">To</FormLabel>
-                            <FormControl>
-                                <Input placeholder="COK" {...field} className="uppercase bg-background h-12" />
-                            </FormControl>
-                            <FormMessage />
-                            </FormItem>
-                        )}
+                            control={form.control}
+                            name="to"
+                            render={({ field }) => (
+                                <FormItem>
+                                <FormLabel className="text-left text-sm font-medium">To</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="COK" {...field} className="uppercase bg-background h-12" />
+                                </FormControl>
+                                <FormMessage />
+                                </FormItem>
+                            )}
                         />
-                    </div>
-                
-                    <div className="lg:col-span-2">
+                    
                         <FormField
                             control={form.control}
                             name="depart"
@@ -155,9 +152,7 @@ function FlightSearchForm() {
                             </FormItem>
                             )}
                         />
-                    </div>
 
-                    <div className="lg:col-span-2">
                         <FormField
                             control={form.control}
                             name="return"
@@ -183,11 +178,9 @@ function FlightSearchForm() {
                         />
                     </div>
                 
-                    <div className="lg:col-span-2">
                     <Button type="submit" size="lg" className="w-full h-12 font-bold tracking-wide">
                         <Search className="mr-2 h-5 w-5" /> Search
                     </Button>
-                    </div>
                 </div>
             </form>
         </Form>
@@ -221,3 +214,5 @@ export function FlightSearchWidget() {
     </div>
   );
 }
+
+    
