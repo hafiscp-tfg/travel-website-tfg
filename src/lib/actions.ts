@@ -1,3 +1,4 @@
+
 "use server";
 
 import { z } from "zod";
@@ -8,7 +9,6 @@ const visaInquirySchema = z.object({
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Phone number is required"),
   visaType: z.string().min(1, "Visa type is required"),
-  message: z.string().optional(),
 });
 
 export async function handleVisaInquiry(prevState: any, formData: FormData) {
@@ -18,7 +18,6 @@ export async function handleVisaInquiry(prevState: any, formData: FormData) {
       email: formData.get("email"),
       phone: formData.get("phone"),
       visaType: formData.get("visaType"),
-      message: formData.get("message"),
     });
 
     if (!validatedFields.success) {
