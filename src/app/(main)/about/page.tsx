@@ -1,6 +1,7 @@
 
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -14,6 +15,7 @@ import {
 } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const aboutHeroImage = PlaceHolderImages.find((p) => p.id === 'about-hero');
 const teamMember1 = PlaceHolderImages.find((p) => p.id === 'team-john-doe');
