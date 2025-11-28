@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Kerala backwaters with a houseboat.",
+      "imageUrl": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxrZXJhbGElMjBiYWNrd2F0ZXJzfGVufDB8fHx8MTc2NDMxMDQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kerala backwaters"
+    },
+    {
+      "id": "dest-dubai",
+      "description": "Dubai skyline with Burj Khalifa.",
+      "imageUrl": "https://images.unsplash.com/photo-1579525612525-053cd3e8cbd7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkdWJhaSUyMHNreWxpbmV8ZW58MHx8fHwxNzY0MjI5NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dubai skyline"
+    },
+    {
+      "id": "dest-jeddah",
+      "description": "King Fahd's Fountain in Jeddah.",
+      "imageUrl": "https://images.unsplash.com/photo-1647435392839-72e3a276364f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqZWRkYWglMjBmb3VudGFpbnxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jeddah fountain"
+    },
+    {
+      "id": "dest-munnar",
+      "description": "Tea plantations in Munnar, Kerala.",
+      "imageUrl": "https://images.unsplash.com/photo-1666891717987-7509e81db05a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NjQyNzM5NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tea plantations"
+    },
+    {
+      "id": "dest-wayanad",
+      "description": "Chembra Peak in Wayanad, Kerala.",
+      "imageUrl": "https://images.unsplash.com/photo-1662442424661-10b2a947015f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXlhbmFkJTIwcGVha3xlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wayanad peak"
+    },
+    {
+      "id": "tour-munnar-wonder",
+      "description": "A beautiful landscape of Munnar tea gardens.",
+      "imageUrl": "https://images.unsplash.com/photo-1663245178289-2d68bc607c3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtdW5uYXIlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0MzEwNDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "munnar landscape"
+    },
+    {
+      "id": "tour-alleppey-dreams",
+      "description": "Houseboat on Alleppey backwaters.",
+      "imageUrl": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbGxlcHBleSUyMGhvdXNlYm9hdHxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "alleppey houseboat"
+    },
+    {
+      "id": "tour-dubai-delight",
+      "description": "Modern architecture of Dubai.",
+      "imageUrl": "https://images.unsplash.com/photo-1537133220331-8993f91bd2d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkdWJhaSUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dubai architecture"
+    },
+    {
+      "id": "tour-europe-express",
+      "description": "Eiffel Tower in Paris.",
+      "imageUrl": "https://images.unsplash.com/photo-1435164205788-305635a36ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZWlmZmVsJTIwdG93ZXJ8ZW58MHx8fHwxNzY0MzA2NjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eiffel tower"
+    },
+    {
+      "id": "about-us-image",
+      "description": "Team of travel agents working together.",
+      "imageUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhZ2VuY3l8ZW58MHx8fHwxNzY0MzEwNDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "travel agency"
+    },
+    {
+      "id": "contact-map",
+      "description": "A map pointing to Calicut, Kerala.",
+      "imageUrl": "https://images.unsplash.com/photo-1756478054328-bb5b1a650ccc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYXAlMjBjYWxpY3V0fGVufDB8fHx8MTc2NDMxMDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map calicut"
+    }
+  ]
 }
