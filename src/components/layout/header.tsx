@@ -51,7 +51,7 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-3">
             <Button variant="outline" className="hidden md:flex bg-primary text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary">Login</Button>
-            <Button className="hidden md:flex bg-secondary text-secondary-foreground hover:bg-secondary/90">Sign Up</Button>
+            <Button className="hidden md:flex bg-white text-primary hover:bg-white/90">Sign Up</Button>
             <Sheet>
                 <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden hover:bg-white/10">
