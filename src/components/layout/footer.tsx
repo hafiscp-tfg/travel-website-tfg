@@ -1,49 +1,52 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Logo } from "@/components/icons";
 
-import { Logo, WhatsAppIcon } from "@/components/icons";
+const footerLinks = {
+    Company: [
+        { href: "/about", label: "About Us" },
+        { href: "/contact", label: "Contact Us" },
+        { href: "#", label: "Careers" },
+    ],
+    Services: [
+        { href: "/", label: "Flights" },
+        { href: "/services/tours", label: "Tours" },
+        { href: "/services/visa", label: "Visa Assistance" },
+    ],
+    Legal: [
+        { href: "#", label: "Terms of Service" },
+        { href: "#", label: "Privacy Policy" },
+    ]
+}
 
 export function Footer() {
   return (
-    <footer className="border-t">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-1">
+    <footer className="bg-secondary/30 border-t">
+      <div className="container py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="col-span-2 md:col-span-1">
             <Logo />
             <p className="text-muted-foreground mt-4 text-sm">
-              Your gateway to the world from God's Own Country.
+              Crafting your perfect journey.
             </p>
           </div>
-          <div className="md:col-span-1">
-            <h4 className="font-headline font-semibold">Quick Links</h4>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/services/tours" className="text-muted-foreground hover:text-primary">Tour Packages</Link></li>
-              <li><Link href="/services/visa" className="text-muted-foreground hover:text-primary">Visa Assistance</Link></li>
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
-            </ul>
-          </div>
-          <div className="md:col-span-2">
-            <h4 className="font-headline font-semibold">Contact Us</h4>
-            <div className="mt-4 space-y-3 text-sm">
-              <p className="text-muted-foreground">Sharafiya Tourism & Travel Consultant<br/>Calicut, Kerala, India</p>
-              <a href="tel:+911234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
-                <Phone className="h-4 w-4" />
-                <span>+91 123 456 7890</span>
-              </a>
-              <a href="mailto:contact@sharafiya.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
-                <Mail className="h-4 w-4" />
-                <span>contact@sharafiya.com</span>
-              </a>
-              <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary">
-                <WhatsAppIcon className="h-4 w-4" />
-                <span>Chat on WhatsApp</span>
-              </a>
+          
+          {Object.entries(footerLinks).map(([title, links]) => (
+            <div key={title}>
+              <h4 className="font-headline font-semibold">{title}</h4>
+              <ul className="mt-4 space-y-2 text-sm">
+                {links.map((link) => (
+                    <li key={link.href}>
+                        <Link href={link.href} className="text-muted-foreground hover:text-primary">
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
         </div>
-        <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Sharafiya Travel Hub. All rights reserved.</p>
+        <div className="mt-12 border-t pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Sharafiya Tourism. All rights reserved.</p>
         </div>
       </div>
     </footer>

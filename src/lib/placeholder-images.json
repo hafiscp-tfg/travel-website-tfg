@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Kerala backwaters with a houseboat.",
-      "imageUrl": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxrZXJhbGElMjBiYWNrd2F0ZXJzfGVufDB8fHx8MTc2NDMxMDQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "kerala backwaters"
+      "description": "Scenic view of mountains and a lake.",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2V8ZW58MHx8fHwxNzY0NTI0ODg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain lake"
     },
     {
       "id": "dest-dubai",
@@ -26,9 +26,15 @@
     },
     {
       "id": "dest-wayanad",
-      "description": "Chembra Peak in Wayanad, Kerala.",
-      "imageUrl": "https://images.unsplash.com/photo-1662442424661-10b2a947015f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXlhbmFkJTIwcGVha3xlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wayanad peak"
+      "description": "Houseboat on Kerala backwaters.",
+      "imageUrl": "https://images.unsplash.com/photo-1602216056096-3b40402ba79b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhbGElMjBob3VzZWJvYXR8ZW58MHx8fHwxNzY0NTI1MTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kerala houseboat"
+    },
+    {
+      "id": "dest-tokyo",
+      "description": "Busy street in Tokyo at night.",
+      "imageUrl": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0b2t5byUyMHN0cmVldCUyMG5pZ2h0fGVufDB8fHx8MTc2NDUyNTIyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tokyo street"
     },
     {
       "id": "tour-munnar-wonder",
@@ -51,8 +57,8 @@
     {
       "id": "tour-europe-express",
       "description": "Eiffel Tower in Paris.",
-      "imageUrl": "https://images.unsplash.com/photo-1435164205788-305635a36ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZWlmZmVsJTIwdG93ZXJ8ZW58MHx8fHwxNzY0MzA2NjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "eiffel tower"
+      "imageUrl": "https://images.unsplash.com/photo-1502602898657-3e91760c0341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJpcyUyMGVpZmZlbCUyMHRvd2VyfGVufDB8fHx8MTc2NDUyNTA4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "paris eiffel"
     },
     {
       "id": "about-us-image",

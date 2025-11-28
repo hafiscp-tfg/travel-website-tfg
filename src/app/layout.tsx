@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Sharafiya Travel Hub',
+  title: 'Sharafiya Tourism',
   description: "Your gateway to the world from God's Own Country.",
   icons: {
     icon: '/favicon.ico',

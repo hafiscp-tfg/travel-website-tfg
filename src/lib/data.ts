@@ -7,20 +7,40 @@ function getImage(id: string): ImagePlaceholder {
 
 export const destinations = [
   {
+    name: "Kerala",
+    country: "India",
+    price: 499,
+    image: getImage("dest-wayanad"),
+  },
+  {
+    name: "Paris",
+    country: "France",
+    price: 750,
+    image: getImage("tour-europe-express"),
+  },
+  {
+    name: "Tokyo",
+    country: "Japan",
+    price: 1200,
+    image: getImage("dest-tokyo"),
+  },
+  {
     name: "Dubai",
+    country: "UAE",
+    price: 600,
     image: getImage("dest-dubai"),
   },
   {
     name: "Jeddah",
+    country: "Saudi Arabia",
+    price: 550,
     image: getImage("dest-jeddah"),
   },
   {
     name: "Munnar",
+    country: "India",
+    price: 300,
     image: getImage("dest-munnar"),
-  },
-  {
-    name: "Wayanad",
-    image: getImage("dest-wayanad"),
   },
 ];
 

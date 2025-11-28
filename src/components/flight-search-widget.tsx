@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { format } from "date-fns";
-import { CalendarIcon, PlaneTakeoff, PlaneLanding, Users, ArrowRight } from "lucide-react";
+import { CalendarIcon, PlaneTakeoff, PlaneLanding, Users, ArrowRight, Search } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Label } from "@/components/ui/label";
 
 const formSchema = z.object({
   tripType: z.enum(["one-way", "round-trip"]),
@@ -22,7 +24,6 @@ const formSchema = z.object({
   to: z.string().min(3, "Required").max(3, "3-letter code"),
   depart: z.date(),
   return: z.date().optional(),
-  passengers: z.coerce.number().min(1),
 }).refine(data => {
     if (data.tripType === 'round-trip') {
         return !!data.return;
@@ -33,173 +34,186 @@ const formSchema = z.object({
     path: ["return"],
 });
 
-export function FlightSearchWidget() {
-  const router = useRouter();
-  const [tripType, setTripType] = useState("round-trip");
-  
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      tripType: "round-trip",
-      from: "CCJ",
-      to: "DXB",
-      depart: new Date(),
-      passengers: 1,
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    const params = new URLSearchParams();
-    params.set("from", values.from);
-    params.set("to", values.to);
-    params.set("depart", format(values.depart, "yyyy-MM-dd"));
-    if (values.tripType === 'round-trip' && values.return) {
-      params.set("return", format(values.return, "yyyy-MM-dd"));
-    }
-    params.set("pax", values.passengers.toString());
+function FlightSearchForm() {
+    const router = useRouter();
     
-    router.push(`/flights/search?${params.toString()}`);
-  }
+    const form = useForm<z.infer<typeof formSchema>>({
+      resolver: zodResolver(formSchema),
+      defaultValues: {
+        tripType: "round-trip",
+        from: "DXB",
+        to: "COK",
+        depart: new Date(),
+      },
+    });
+  
+    function onSubmit(values: z.infer<typeof formSchema>) {
+      const params = new URLSearchParams();
+      params.set("from", values.from);
+      params.set("to", values.to);
+      params.set("depart", format(values.depart, "yyyy-MM-dd"));
+      if (values.tripType === 'round-trip' && values.return) {
+        params.set("return", format(values.return, "yyyy-MM-dd"));
+      }
+      
+      router.push(`/flights/search?${params.toString()}`);
+    }
 
-  return (
-    <Card className="bg-card/80 backdrop-blur-sm border-border/20 shadow-lg">
-      <CardHeader>
-        <RadioGroup defaultValue="round-trip" className="flex items-center" onValueChange={(value) => setTripType(value)}>
-            <div className="flex items-center space-x-2">
-                <RadioGroupItem value="round-trip" id="round-trip" />
-                <Label htmlFor="round-trip">Round Trip</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-                <RadioGroupItem value="one-way" id="one-way" />
-                <Label htmlFor="one-way">One Way</Label>
-            </div>
-        </RadioGroup>
-      </CardHeader>
-      <CardContent>
+    const tripType = form.watch("tripType");
+
+    return (
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 items-end">
-            <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-5 gap-4">
-              <div className="md:col-span-2">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
-                  control={form.control}
-                  name="from"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>From</FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                            <PlaneTakeoff className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                            <Input placeholder="CCJ" {...field} className="pl-9 uppercase" />
-                        </div>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div className="hidden md:flex items-center justify-center pt-8">
-                <ArrowRight className="h-5 w-5 text-muted-foreground" />
-              </div>
-               <div className="md:col-span-2">
-                <FormField
-                  control={form.control}
-                  name="to"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>To</FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                          <PlaneLanding className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                          <Input placeholder="DXB" {...field} className="pl-9 uppercase" />
-                        </div>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 grid grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="depart"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel>Depart</FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild>
+                    control={form.control}
+                    name="tripType"
+                    render={({ field }) => (
+                    <FormItem className="space-y-3">
                         <FormControl>
-                          <Button variant={"outline"} className={cn("pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
-                            {field.value ? format(field.value, "MMM dd, y") : <span>Pick a date</span>}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
+                            <RadioGroup
+                                onValueChange={field.onChange}
+                                defaultValue={field.value}
+                                className="flex space-x-4"
+                            >
+                                <FormItem className="flex items-center space-x-2 space-y-0">
+                                    <FormControl>
+                                        <RadioGroupItem value="round-trip" />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">Round Trip</FormLabel>
+                                </FormItem>
+                                <FormItem className="flex items-center space-x-2 space-y-0">
+                                    <FormControl>
+                                        <RadioGroupItem value="one-way" />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">One Way</FormLabel>
+                                </FormItem>
+                            </RadioGroup>
                         </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < new Date(new Date().setHours(0,0,0,0))} initialFocus />
-                      </PopoverContent>
-                    </Popover>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="return"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel>Return</FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild disabled={tripType === 'one-way'}>
-                        <FormControl>
-                          <Button variant={"outline"} className={cn("pl-3 text-left font-normal", !field.value && "text-muted-foreground")}>
-                            {field.value ? format(field.value, "MMM dd, y") : <span>Pick a date</span>}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < (form.getValues("depart") || new Date())} initialFocus />
-                      </PopoverContent>
-                    </Popover>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            
-            <div className="lg:col-span-1">
-                <FormField
-                  control={form.control}
-                  name="passengers"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Passengers</FormLabel>
-                      <FormControl>
-                        <div className="relative">
-                          <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                          <Input type="number" min="1" {...field} className="pl-9" />
-                        </div>
-                      </FormControl>
-                      <FormMessage />
+                        <FormMessage />
                     </FormItem>
-                  )}
+                 )}
                 />
-            </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4 items-end">
+                    <div className="lg:col-span-2">
+                        <FormField
+                        control={form.control}
+                        name="from"
+                        render={({ field }) => (
+                            <FormItem>
+                            <FormLabel>From</FormLabel>
+                            <FormControl>
+                                <Input placeholder="DXB" {...field} className="uppercase bg-input" />
+                            </FormControl>
+                            <FormMessage />
+                            </FormItem>
+                        )}
+                        />
+                    </div>
 
-            <div className="lg:col-span-2">
-              <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
-                Search Flights
-              </Button>
-            </div>
-          </form>
+                    <div className="lg:col-span-2">
+                        <FormField
+                        control={form.control}
+                        name="to"
+                        render={({ field }) => (
+                            <FormItem>
+                            <FormLabel>To</FormLabel>
+                            <FormControl>
+                                <Input placeholder="COK" {...field} className="uppercase bg-input" />
+                            </FormControl>
+                            <FormMessage />
+                            </FormItem>
+                        )}
+                        />
+                    </div>
+                
+                    <div className="lg:col-span-2">
+                        <FormField
+                            control={form.control}
+                            name="depart"
+                            render={({ field }) => (
+                            <FormItem className="flex flex-col">
+                                <FormLabel>Departure</FormLabel>
+                                <Popover>
+                                <PopoverTrigger asChild>
+                                    <FormControl>
+                                    <Button variant={"outline"} className={cn("pl-3 text-left font-normal bg-input border-input", !field.value && "text-muted-foreground")}>
+                                        {field.value ? format(field.value, "MM/dd/yyyy") : <span>Pick a date</span>}
+                                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                    </Button>
+                                    </FormControl>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-auto p-0" align="start">
+                                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < new Date(new Date().setHours(0,0,0,0))} initialFocus />
+                                </PopoverContent>
+                                </Popover>
+                                <FormMessage />
+                            </FormItem>
+                            )}
+                        />
+                    </div>
+
+                    <div className="lg:col-span-2">
+                        <FormField
+                            control={form.control}
+                            name="return"
+                            render={({ field }) => (
+                            <FormItem className="flex flex-col">
+                                <FormLabel>Return</FormLabel>
+                                <Popover>
+                                <PopoverTrigger asChild disabled={tripType === 'one-way'}>
+                                    <FormControl>
+                                    <Button variant={"outline"} className={cn("pl-3 text-left font-normal bg-input border-input", !field.value && "text-muted-foreground")}>
+                                        {field.value ? format(field.value, "MM/dd/yyyy") : <span>Pick a date</span>}
+                                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                    </Button>
+                                    </FormControl>
+                                </PopoverTrigger>
+                                <PopoverContent className="w-auto p-0" align="start">
+                                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled={(date) => date < (form.getValues("depart") || new Date())} initialFocus />
+                                </PopoverContent>
+                                </Popover>
+                                <FormMessage />
+                            </FormItem>
+                            )}
+                        />
+                    </div>
+                
+                    <div className="lg:col-span-2">
+                    <Button type="submit" size="lg" className="w-full">
+                        <Search className="mr-2 h-4 w-4" /> Search
+                    </Button>
+                    </div>
+                </div>
+            </form>
         </Form>
-      </CardContent>
-    </Card>
-  );
+    )
 }
 
-// These components are not in shadcn/ui by default, adding them here for use in the widget.
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
+export function FlightSearchWidget() {
+
+  return (
+    <div className="bg-background rounded-lg shadow-lg p-4 sm:p-6">
+        <Tabs defaultValue="flights" className="w-full">
+            <TabsList className="grid w-full grid-cols-4 bg-muted/60">
+                <TabsTrigger value="flights">Flights</TabsTrigger>
+                <TabsTrigger value="tours">Tours</TabsTrigger>
+                <TabsTrigger value="hotels">Hotels</TabsTrigger>
+                <TabsTrigger value="visa">Visa</TabsTrigger>
+            </TabsList>
+            <TabsContent value="flights" className="pt-6">
+                <FlightSearchForm />
+            </TabsContent>
+            <TabsContent value="tours">
+                <p className="text-center text-muted-foreground py-8">Tour search coming soon!</p>
+            </TabsContent>
+            <TabsContent value="hotels">
+                <p className="text-center text-muted-foreground py-8">Hotel search coming soon!</p>
+            </TabsContent>
+            <TabsContent value="visa">
+                <p className="text-center text-muted-foreground py-8">Visa information coming soon!</p>
+            </TabsContent>
+        </Tabs>
+    </div>
+  );
+}

@@ -12,10 +12,9 @@ import { Logo } from "@/components/icons";
 const navLinks = [
   { href: "/", label: "Flights" },
   { href: "/services/tours", label: "Tours" },
-  { href: "/services/visa", label: "Visa" },
+  { href: "/services/visa", label: "Visa Services" },
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
-  { href: "/admin", label: "Admin" },
 ];
 
 export function Header() {
@@ -27,7 +26,7 @@ export function Header() {
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
         </Link>
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden md:flex gap-6">
             {navLinks.map(({ href, label }) => (
               <Link
@@ -42,6 +41,10 @@ export function Header() {
               </Link>
             ))}
           </nav>
+          <div className="hidden md:flex items-center gap-2">
+            <Button variant="ghost">Login</Button>
+            <Button>Sign Up</Button>
+          </div>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -68,6 +71,10 @@ export function Header() {
                     {label}
                   </Link>
                 ))}
+              </div>
+              <div className="mt-6 flex flex-col gap-2">
+                <Button variant="outline">Login</Button>
+                <Button>Sign Up</Button>
               </div>
             </SheetContent>
           </Sheet>
