@@ -8,7 +8,7 @@ import { Plus_Jakarta_Sans } from 'next/font/google';
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
-  title: 'Sharafiya Tourism',
+  title: 'Sharafiya Travel | Preview | ThinkForgeGlobal LLC',
   description: "Your gateway to the world from God's Own Country.",
   icons: {
     icon: 'https://i.ibb.co/BVmTKW25/cropped-Whats-App-Image-2025-01-06-at-16-53-10-4633dede-removebg-preview-13-1.png',
