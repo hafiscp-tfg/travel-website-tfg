@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/icons";
+import { AuthDialog } from "@/components/auth/auth-dialog";
 
 const navLinks = [
   { href: "/services/tours", label: "Tours" },
@@ -50,8 +51,13 @@ export function Header() {
             ))}
         </nav>
         <div className="flex items-center gap-3">
-            <Button variant="outline" className="hidden md:flex bg-primary text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary">Login</Button>
-            <Button className="hidden md:flex bg-white text-primary hover:bg-white/90">Sign Up</Button>
+            <AuthDialog defaultTab="login">
+              <Button variant="outline" className="hidden md:flex bg-primary text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary">Login</Button>
+            </AuthDialog>
+            <AuthDialog defaultTab="signup">
+              <Button className="hidden md:flex bg-white text-primary hover:bg-white/90">Sign Up</Button>
+            </AuthDialog>
+
             <Sheet>
                 <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden hover:bg-white/10">
@@ -89,8 +95,12 @@ export function Header() {
                     ))}
                 </div>
                 <div className="mt-6 flex flex-col gap-2">
+                  <AuthDialog defaultTab="login">
                     <Button variant="secondary">Login</Button>
+                  </AuthDialog>
+                  <AuthDialog defaultTab="signup">
                     <Button>Sign Up</Button>
+                  </AuthDialog>
                 </div>
                 </SheetContent>
             </Sheet>
