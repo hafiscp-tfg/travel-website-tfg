@@ -3,49 +3,49 @@
     {
       "id": "hero-background",
       "description": "Scenic view of mountains and a lake.",
-      "imageUrl": "https://images.unsplash.com/photo-1603979649806-5299879db16b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxha2V8ZW58MHx8fHwxNzY0MjkzMjg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1503614472-8c93d56e92ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb3VudGFpbiUyMGxha2V8ZW58MHx8fHwxNzY0MjkzMjg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mountain lake"
     },
     {
       "id": "dest-dubai",
       "description": "Dubai skyline with Burj Khalifa.",
-      "imageUrl": "https://images.unsplash.com/photo-1607414851776-f2fcc379fb48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkdWJhaSUyMHNreWxpbmV8ZW58MHx8fHwxNzY0MjI5NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1550779864-6ccb28702fdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkdWJhaSUyMHNreWxpbmV8ZW58MHx8fHwxNzY0MjI5NDU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dubai skyline"
     },
     {
       "id": "dest-jeddah",
       "description": "King Fahd's Fountain in Jeddah.",
-      "imageUrl": "https://images.unsplash.com/photo-1707449908429-e0189297d671?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqZWRkYWglMjBmb3VudGFpbnxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1658844244926-c2bb00fc0a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxqZWRkYWglMjBmb3VudGFpbnxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "jeddah fountain"
     },
     {
       "id": "dest-munnar",
       "description": "Tea plantations in Munnar, Kerala.",
-      "imageUrl": "https://images.unsplash.com/photo-1763617702099-d956f3fd8324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NjQyNzM5NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597221547263-ea4daa52539b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWElMjBwbGFudGF0aW9uc3xlbnwwfHx8fDE3NjQyNzM5NDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tea plantations"
     },
     {
       "id": "dest-wayanad",
       "description": "Houseboat on Kerala backwaters.",
-      "imageUrl": "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrZXJhbGElMjBob3VzZWJvYXR8ZW58MHx8fHwxNzY0MzE3MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1652805424854-228ba60dd4eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrZXJhbGElMjBob3VzZWJvYXR8ZW58MHx8fHwxNzY0MzE3MjAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "kerala houseboat"
     },
     {
       "id": "dest-tokyo",
       "description": "Busy street in Tokyo at night.",
-      "imageUrl": "https://images.unsplash.com/photo-1587653263995-422546a7a569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0b2t5byUyMHN0cmVldHxlbnwwfHx8fDE3NjQyNDAzNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1554058501-f6872d688003?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dG9reW8lMjBzdHJlZXR8ZW58MHx8fHwxNzY0MjQwMzUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tokyo street"
     },
     {
       "id": "tour-munnar-wonder",
       "description": "A beautiful landscape of Munnar tea gardens.",
-      "imageUrl": "https://images.unsplash.com/photo-1663245178507-af34e5e7703f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtdW5uYXIlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY0MzEwNDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1663245178254-c056a5cc637c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bXVubmFyJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc2NDMxMDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "munnar landscape"
     },
     {
       "id": "tour-alleppey-dreams",
       "description": "Houseboat on Alleppey backwaters.",
-      "imageUrl": "https://images.unsplash.com/photo-1634141693341-9d51836aa188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhbGxlcHBleSUyMGhvdXNlYm9hdHxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1720445821834-1db9c765cb82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbGxlcHBleSUyMGhvdXNlYm9hdHxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "alleppey houseboat"
     },
     {
@@ -57,26 +57,50 @@
     {
       "id": "tour-europe-express",
       "description": "Eiffel Tower in Paris.",
-      "imageUrl": "https://images.unsplash.com/photo-1699727772686-623845bd854f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwYXJpcyUyMGVpZmZlbHxlbnwwfHx8fDE3NjQyNjAwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1726669451920-f84bfadec5b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGFyaXMlMjBlaWZmZWx8ZW58MHx8fHwxNzY0MjYwMDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "paris eiffel"
     },
     {
       "id": "about-us-image",
       "description": "Team of travel agents working together.",
-      "imageUrl": "https://images.unsplash.com/photo-1697497315167-bb3adbcf9ade?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0cmF2ZWwlMjBhZ2VuY3l8ZW58MHx8fHwxNzY0MzEwNDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1675154134079-4a71dd46635c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0cmF2ZWwlMjBhZ2VuY3l8ZW58MHx8fHwxNzY0MzEwNDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "travel agency"
     },
     {
       "id": "contact-map",
       "description": "A map pointing to Calicut, Kerala.",
-      "imageUrl": "https://images.unsplash.com/photo-1511526088318-f1a6d7646a05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFwJTIwY2FsaWN1dHxlbnwwfHx8fDE3NjQzMTA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1567910641111-e76f2b728a33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXAlMjBjYWxpY3V0fGVufDB8fHx8MTc2NDMxMDQxOHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map calicut"
     },
     {
       "id": "visa-hero-background",
       "description": "Stylized image of passports and boarding passes on a world map.",
-      "imageUrl": "https://images.unsplash.com/photo-1657358846130-3305fd8fcd30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwYXNzcG9ydHMlMjB0cmF2ZWx8ZW58MHx8fHwxNzY0MzE3NTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1655722722754-3e536225c64b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXNzcG9ydHMlMjB0cmF2ZWx8ZW58MHx8fHwxNzY0MzE3NTk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "passports travel"
+    },
+    {
+      "id": "about-hero",
+      "description": "Stunning aerial view of a tropical island with turquoise water and white sand beaches",
+      "imageUrl": "https://images.unsplash.com/photo-1586500036706-41963de24d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0cm9waWNhbCUyMGlzbGFuZHxlbnwwfHx8fDE3NjQyNjY0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tropical island"
+    },
+    {
+      "id": "team-john-doe",
+      "description": "Headshot of John Doe",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQyNTExNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-jane-smith",
+      "description": "Headshot of Jane Smith",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NDI3NzgyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "team-alex-johnson",
+      "description": "Headshot of Alex Johnson",
+      "imageUrl": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQyNzA2MTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
     }
   ]
 }
