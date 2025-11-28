@@ -1,67 +1,95 @@
+
+'use client';
+
 import Image from 'next/image';
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageSquare } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { WhatsAppIcon } from "@/components/icons";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const mapImage = PlaceHolderImages.find(p => p.id === 'contact-map');
 
-const contactDetails = [
-  { icon: MapPin, text: "Sharafiya Tourism, Calicut, Kerala, India" },
-  { icon: Phone, text: "+91 123 456 7890", href: "tel:+911234567890" },
-  { icon: Mail, text: "contact@sharafiya.com", href: "mailto:contact@sharafiya.com" },
-  { icon: WhatsAppIcon, text: "Chat with us on WhatsApp", href: "https://wa.me/911234567890", target: "_blank" },
+const contactItems = [
+    {
+        icon: MapPin,
+        title: "Our Office",
+        lines: ["Ground Floor, Skytower Business Center, Bank Rd, Mavoor Rd Junction, Calicut, Kerala 673001"]
+    },
+    {
+        icon: Phone,
+        title: "Phone",
+        lines: [{ text: "+91 123 456 7890", href: "tel:+911234567890" }]
+    },
+    {
+        icon: MessageSquare,
+        title: "WhatsApp",
+        lines: ["Connect with us for instant support."],
+        button: {
+            href: "https://wa.me/911234567890",
+            text: "Chat on WhatsApp",
+            icon: WhatsAppIcon
+        }
+    }
 ];
+
 
 export default function ContactPage() {
   return (
-    <div className="bg-secondary/30">
-        <div className="container py-16 md:py-24">
-            <div className="text-center">
-                <h1 className="font-headline text-4xl md:text-5xl">Get in Touch</h1>
-                <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-                    Have questions or need assistance? Our team is here to help. Reach out to us through any of the channels below.
-                </p>
+    <div className="bg-background">
+        <div className="container mx-auto max-w-6xl px-4 py-12 sm:py-16 md:py-20">
+            <div className="mb-12 text-center md:mb-16">
+                <h1 className="text-slate-900 text-4xl font-black leading-tight tracking-tight sm:text-5xl">Contact Us</h1>
+                <p className="text-slate-600 text-lg font-normal leading-normal mt-4 max-w-2xl mx-auto">We're here to help. Reach out to us for any inquiries about flights, tours, or visa services.</p>
             </div>
             
-            <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <Card>
-                    <CardHeader>
-                        <CardTitle className="font-headline">Contact Information</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-6">
-                        {contactDetails.map((item, index) => {
-                            const Icon = item.icon;
-                            const isLink = !!item.href;
-                            const content = (
-                                <div className="flex items-start gap-4">
-                                    <div className="p-2 bg-primary/10 rounded-full">
-                                        <Icon className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <span className="text-lg pt-1">{item.text}</span>
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+                <div className="flex flex-col gap-8">
+                    {contactItems.map(item => {
+                        const Icon = item.icon;
+                        return (
+                            <div key={item.title} className="flex items-start gap-4">
+                                <div className="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-12">
+                                    <Icon className="size-6" />
                                 </div>
-                            );
-
-                            if (isLink) {
-                                return <a key={index} href={item.href} target={item.target} rel="noopener noreferrer" className="block hover:bg-secondary/50 rounded-lg p-2 -m-2">{content}</a>
-                            }
-                            return <div key={index} className="p-2 -m-2">{content}</div>
-                        })}
-                    </CardContent>
-                </Card>
+                                <div className="flex flex-col justify-center">
+                                    <p className="text-slate-900 text-lg font-medium leading-normal">{item.title}</p>
+                                    {item.lines.map((line, index) => {
+                                        if (typeof line === 'string') {
+                                            return <p key={index} className="text-slate-600 text-base font-normal leading-relaxed mt-1">{line}</p>;
+                                        }
+                                        return <a key={index} href={line.href} className="text-slate-600 text-base font-normal leading-relaxed mt-1 hover:text-primary transition-colors">{line.text}</a>
+                                    })}
+                                    {item.button && (
+                                        <Link href={item.button.href} passHref>
+                                            <Button asChild className="mt-4 w-fit">
+                                                <a>
+                                                    <item.button.icon className="mr-2" />
+                                                    {item.button.text}
+                                                </a>
+                                            </Button>
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
                 
-                <div className="overflow-hidden rounded-lg shadow-lg">
-                    {mapImage && (
-                        <Image
-                            src={mapImage.imageUrl}
-                            alt={mapImage.description}
-                            data-ai-hint={mapImage.imageHint}
-                            width={800}
-                            height={600}
-                            className="w-full h-full object-cover"
-                        />
-                    )}
+                <div className="relative overflow-hidden rounded-xl h-96 md:h-full">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.116933560249!2d75.78018287481267!3d11.2529949889417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6593623975a23%3A0x77c2957e8417c49b!2sMavoor%20Road%20Junction!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Office Location Map"
+                        data-location="Calicut"
+                    ></iframe>
                 </div>
             </div>
         </div>
