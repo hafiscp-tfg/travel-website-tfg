@@ -140,7 +140,7 @@ function FlightSearchForm() {
                                     <FormControl>
                                     <Button variant={"outline"} className={cn("justify-start text-left font-normal bg-background h-12", !field.value && "text-muted-foreground")}>
                                         <CalendarIcon className="mr-2 h-4 w-4" />
-                                        {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                                        {field.value ? format(field.value, "MMM d, yyyy") : <span>Pick a date</span>}
                                     </Button>
                                     </FormControl>
                                 </PopoverTrigger>
@@ -164,7 +164,7 @@ function FlightSearchForm() {
                                     <FormControl>
                                     <Button variant={"outline"} className={cn("justify-start text-left font-normal bg-background h-12", !field.value && "text-muted-foreground")}>
                                         <CalendarIcon className="mr-2 h-4 w-4" />
-                                        {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                                        {field.value ? format(field.value, "MMM d, yyyy") : <span>Pick a date</span>}
                                     </Button>
                                     </FormControl>
                                 </PopoverTrigger>
@@ -214,7 +214,5 @@ export function FlightSearchWidget() {
     </div>
   );
 }
-
-    
 
     
