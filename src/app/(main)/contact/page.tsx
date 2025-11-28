@@ -63,7 +63,7 @@ export default function ContactPage() {
                                         return <a key={index} href={line.href} className="text-slate-600 text-base font-normal leading-relaxed mt-1 hover:text-primary transition-colors">{line.text}</a>
                                     })}
                                     {item.button && (
-                                        <Link href={item.button.href} passHref>
+                                        <Link href={item.button.href} passHref legacyBehavior>
                                             <Button asChild className="mt-4 w-fit">
                                                 <a>
                                                     <item.button.icon className="mr-2" />
