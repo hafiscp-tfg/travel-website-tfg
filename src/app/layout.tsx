@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from '@/lib/utils';
-import { Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
   title: 'Sharafiya Tourism',
@@ -28,8 +28,8 @@ export default function RootLayout({
         />
       </head>
       <body className={cn(
-        "min-h-screen bg-background font-sans antialiased",
-        inter.variable
+        "min-h-screen bg-background font-display text-foreground antialiased",
+        jakarta.variable
       )}>
         {children}
         <Toaster />

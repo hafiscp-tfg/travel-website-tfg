@@ -5,7 +5,6 @@ import { Plane, Ship, FileText } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { destinations } from '@/lib/data';
 import { FlightSearchWidget } from '@/components/flight-search-widget';
-import { Card, CardContent } from '@/components/ui/card';
 
 const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 const serviceCards = [
@@ -17,7 +16,7 @@ const serviceCards = [
 export default function Home() {
   return (
     <>
-      <section className="relative w-full h-[70vh] md:h-[80vh] text-white">
+      <section className="relative w-full">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -29,7 +28,7 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative container h-full flex flex-col items-center justify-center text-center">
+        <div className="relative container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
             <div className="w-full max-w-4xl">
               <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight tracking-tight">
                 Find and Book Your Next Adventure
@@ -45,7 +44,7 @@ export default function Home() {
       </section>
 
 
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-20 md:py-28 bg-card">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Welcome to Sharafiya Tourism</h2>
           <p className="mt-4 max-w-3xl mx-auto text-base md:text-lg text-muted-foreground">
@@ -55,8 +54,8 @@ export default function Home() {
             {serviceCards.map((service) => {
               const Icon = service.icon
               return (
-                <div key={service.title} className="flex flex-col items-center p-8 bg-secondary/30 dark:bg-secondary rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center justify-center size-16 rounded-full bg-primary/10 text-primary mb-5">
+                <div key={service.title} className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm">
+                    <div className="flex items-center justify-center size-16 rounded-full bg-secondary/20 text-secondary mb-5">
                         <Icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-bold">{service.title}</h3>
@@ -68,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-secondary/30 dark:bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Explore Our Popular Destinations</h2>
@@ -92,7 +91,7 @@ export default function Home() {
                      <div className="absolute bottom-0 left-0 p-6 text-white">
                         <h3 className="text-2xl font-bold">{dest.name}</h3>
                         <p className="text-sm opacity-90">{dest.country}</p>
-                        <p className="mt-2 text-sm font-medium text-orange-400">Tours from ${dest.price}</p>
+                        <p className="mt-2 text-sm font-medium text-secondary">Tours from ${dest.price}</p>
                      </div>
                 </div>
               </Link>
