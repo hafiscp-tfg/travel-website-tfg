@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { handleQuoteRequest } from "@/lib/actions";
@@ -22,7 +23,7 @@ function SubmitButton() {
 
 export function QuoteRequestForm({ tourName }: { tourName: string }) {
     const { toast } = useToast();
-    const [state, formAction] = useFormState(handleQuoteRequest, { message: "", errors: {} });
+    const [state, formAction] = useActionState(handleQuoteRequest, { message: "", errors: {} });
 
     useEffect(() => {
         if (state?.message) {
