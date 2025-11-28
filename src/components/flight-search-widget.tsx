@@ -44,6 +44,7 @@ function FlightSearchForm() {
         from: "DXB",
         to: "COK",
         depart: new Date(),
+        return: new Date(new Date().setDate(new Date().getDate() + 2))
       },
     });
   
@@ -105,7 +106,7 @@ function FlightSearchForm() {
                             control={form.control}
                             name="from"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className="flex flex-col">
                                 <FormLabel className="text-left text-sm font-medium">From</FormLabel>
                                 <FormControl>
                                     <Input placeholder="DXB" {...field} className="uppercase bg-background h-12" />
@@ -119,7 +120,7 @@ function FlightSearchForm() {
                             control={form.control}
                             name="to"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className="flex flex-col">
                                 <FormLabel className="text-left text-sm font-medium">To</FormLabel>
                                 <FormControl>
                                     <Input placeholder="COK" {...field} className="uppercase bg-background h-12" />
@@ -214,5 +215,7 @@ export function FlightSearchWidget() {
     </div>
   );
 }
+
+    
 
     
