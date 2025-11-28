@@ -1,9 +1,15 @@
+
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const Logo = ({ className }: { className?: string }) => (
-  <div className={cn("text-lg font-bold leading-tight tracking-[-0.015em]", className)}>
-    Sharafiya Tourism
-  </div>
+  <Image 
+    src="https://i.ibb.co/BVmTKW25/cropped-Whats-App-Image-2025-01-06-at-16-53-10-4633dede-removebg-preview-13-1.png"
+    alt="Sharafiya Tourism Logo"
+    width={150}
+    height={50}
+    className={cn("w-auto h-12", className)}
+  />
 );
 
 export const LogoIcon = ({className}: {className?: string}) => (
