@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Sharafiya Tourism',
   description: "Your gateway to the world from God's Own Country.",
   icons: {
-    icon: '/https://i.ibb.co/BVmTKW25/cropped-Whats-App-Image-2025-01-06-at-16-53-10-4633dede-removebg-preview-13-1.png',
+    icon: 'https://i.ibb.co/BVmTKW25/cropped-Whats-App-Image-2025-01-06-at-16-53-10-4633dede-removebg-preview-13-1.png',
   },
 };
 
