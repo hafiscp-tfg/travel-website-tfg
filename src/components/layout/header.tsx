@@ -21,17 +21,17 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b bg-primary text-primary-foreground">
       <div className="container mx-auto flex h-20 items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 text-foreground">
+        <Link href="/" className="flex items-center gap-2">
           <Logo />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
             <Link
                 href="/"
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  pathname === "/" ? "text-primary" : "text-foreground"
+                  "text-sm font-medium transition-colors hover:text-white/80",
+                  pathname === "/" ? "text-white font-bold" : "text-white/90"
                 )}
             >
                 Home
@@ -41,8 +41,8 @@ export function Header() {
                 key={href}
                 href={href}
                 className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname.startsWith(href) ? "text-primary" : "text-foreground"
+                  "text-sm font-medium transition-colors hover:text-white/80",
+                  pathname.startsWith(href) ? "text-white font-bold" : "text-white/90"
                 )}
             >
                 {label}
@@ -50,11 +50,11 @@ export function Header() {
             ))}
         </nav>
         <div className="flex items-center gap-3">
-            <Button variant="outline" className="hidden md:flex bg-blue-50 hover:bg-blue-100">Login</Button>
-            <Button className="hidden md:flex">Sign Up</Button>
+            <Button variant="outline" className="hidden md:flex bg-primary text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary">Login</Button>
+            <Button className="hidden md:flex bg-secondary text-secondary-foreground hover:bg-secondary/90">Sign Up</Button>
             <Sheet>
                 <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="md:hidden hover:bg-white/10">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Toggle Navigation</span>
                 </Button>
