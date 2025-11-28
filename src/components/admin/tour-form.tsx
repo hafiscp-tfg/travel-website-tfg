@@ -105,7 +105,7 @@ export function TourForm({ isOpen, onClose }: TourFormProps) {
             <Textarea id="description" {...register("description")} rows={8} />
           </div>
 
-          <Button type="submit" className="w-full bg-accent hover:bg-accent/90">Save Package</Button>
+          <Button type="submit" className="w-full">Save Package</Button>
         </form>
       </SheetContent>
     </Sheet>

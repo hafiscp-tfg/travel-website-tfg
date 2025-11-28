@@ -45,7 +45,7 @@ export function Header() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" className="bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-bold">Login</Button>
+            <Button variant="secondary" className="font-bold">Login</Button>
             <Button className="font-bold">Sign Up</Button>
           </div>
           <Sheet>
@@ -79,7 +79,7 @@ export function Header() {
                 ))}
               </div>
               <div className="mt-6 flex flex-col gap-2">
-                <Button variant="outline">Login</Button>
+                <Button variant="secondary">Login</Button>
                 <Button>Sign Up</Button>
               </div>
             </SheetContent>

@@ -71,7 +71,7 @@ function FlightResults() {
                   <div className="text-xl font-bold text-right">
                     ₹{flight.price.toLocaleString("en-IN")}
                   </div>
-                  <Button className="w-full md:w-auto bg-accent hover:bg-accent/90">Book Now</Button>
+                  <Button className="w-full md:w-auto">Book Now</Button>
                 </div>
               </CardContent>
             </Card>

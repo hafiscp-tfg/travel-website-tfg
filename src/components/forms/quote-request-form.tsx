@@ -14,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 function SubmitButton() {
     const { pending } = useFormStatus();
     return (
-        <Button type="submit" className="w-full bg-accent hover:bg-accent/90" disabled={pending}>
+        <Button type="submit" className="w-full" disabled={pending}>
             {pending ? "Sending..." : "Request Quote"}
         </Button>
     );
