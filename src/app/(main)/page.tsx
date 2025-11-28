@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Plane, Ship, FileText } from 'lucide-react';
@@ -55,7 +56,7 @@ export default function Home() {
               const Icon = service.icon
               return (
                 <div key={service.title} className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm">
-                    <div className="flex items-center justify-center size-16 rounded-full bg-secondary/20 text-secondary mb-5">
+                    <div className="flex items-center justify-center size-16 rounded-full bg-primary/10 text-primary mb-5">
                         <Icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-xl font-bold">{service.title}</h3>
